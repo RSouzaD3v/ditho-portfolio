@@ -14,8 +14,7 @@ export const Header = () => {
     { id: 2, name: "Projetos", link: "/projetos" },
     { id: 3, name: "Serviços", link: "/servicos" },
     { id: 4, name: "Sobre", link: "/sobre-nos" },
-    { id: 5, name: "Clientes", link: "/clientes" },
-    { id: 6, name: "Desenvolvedores", link: "/desenvolvedores" },
+    { id: 5, name: "Contatos", link: "/contatos" },
   ];
 
   const handleOpen = () => setIsOpen(!isOpen);
@@ -25,15 +24,14 @@ export const Header = () => {
       <Container className="flex items-center justify-between py-2 px-5 md:px-0">
         {/* Logo */}
         <Link href="/">
-          <h2 className="text-2xl">Dit<b className="text-orange-300">h</b>o</h2>
-          {/* <Image priority src="/logo.png" alt="Logo" width={80} height={80} className="cursor-pointer" /> */}
+          <Image fetchPriority="high" src="/logo.png" alt="Logo" width={80} height={80} className="cursor-pointer" />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex">
           <ul className="flex items-center gap-6">
             {links.map((link) => (
-              <li key={link.id} className="uppercase hover:text-blue-400 transition">
+              <li key={link.id} className="uppercase hover:text-orange-400 transition">
                 <Link href={link.link}>{link.name}</Link>
               </li>
             ))}
@@ -42,7 +40,7 @@ export const Header = () => {
 
         {/* Orçamento button */}
         <div className="hidden md:flex">
-          <Link href="/budget" className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+          <Link href="/budget" className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition">
             <Flame size={20} />
             <span className="uppercase font-bold text-sm">Quero um Orçamento</span>
           </Link>

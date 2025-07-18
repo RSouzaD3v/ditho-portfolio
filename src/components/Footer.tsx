@@ -5,7 +5,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-orange-950 text-white">
+    <footer className="bg-blue-950 text-white">
       <div className="max-w-6xl mx-auto px-5 py-10 flex flex-col md:flex-row justify-between gap-8">
         {/* Logo e descrição */}
         <div className="flex flex-col items-start">
@@ -80,7 +80,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black text-center py-4 text-white/60 text-sm">
+      <div className="text-center py-4 text-sm">
         © {new Date().getFullYear()} Ditho. Todos os direitos reservados.
       </div>
     </footer>
