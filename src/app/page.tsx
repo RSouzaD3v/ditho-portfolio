@@ -1,28 +1,38 @@
-import { AnimatedTestimonialsDemo } from "@/components/AnimatedTestimonials";
+import { ClientsCarousel } from "@/components/ClientsCarousel";
 import { HeroParallaxDemo } from "@/components/HeroParallax";
 
 export default function Home() {
   return (
     <div className="bg-black text-white">
-      <section className="bg-black w-full max-h-[700px] h-screen flex items-center justify-center">
-        <div className="text-center flex items-center flex-col space-y-5">
-          <div>
-            <h1 className="text-6xl font-bold mb-2">Solução e Tecnologia</h1>
-            <p>Temos os melhores profissionais para dar um Up no seu negócio.</p>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <button className="p-2 rounded-sm bg-orange-600 cursor-pointer hover:bg-amber-800">Saiba Mais</button>
-            <button className="bg-white text-black p-2 rounded-sm cursor-pointer hover:bg-gray-600 hover:text-white">Entrar em contato</button>
+      {/* Hero principal */}
+      <section className="w-full h-screen flex items-center justify-center px-4">
+        <div className="text-center space-y-6 max-w-2xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+            Solução e Tecnologia
+          </h1>
+          <p className="text-base md:text-lg text-gray-300">
+            Temos os melhores profissionais para dar um <strong className="text-orange-500">Up</strong> no seu negócio.
+          </p>
+          <div className="flex flex-col md:flex-row justify-center gap-4">
+            <button className="px-6 py-2 rounded-md bg-orange-600 hover:bg-amber-700 transition">
+              Saiba Mais
+            </button>
+            <button className="px-6 py-2 rounded-md bg-white text-black hover:bg-gray-600 hover:text-white transition">
+              Entrar em contato
+            </button>
           </div>
         </div>
       </section>
 
+      {/* Hero Parallax - destaque visual */}
       <HeroParallaxDemo />
 
-      <section className="w-full flex items-center justify-between flex-col">
-        <h1 className="md:text-6xl text-3xl font-bold mt-10 mb-5">Feedbacks de Clientes</h1>
-        <AnimatedTestimonialsDemo />
+      {/* Seção de Depoimentos */}
+      <section className="w-full flex flex-col items-center px-4 py-16 bg-black text-white">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+          Feedbacks de Clientes
+        </h2>
+        <ClientsCarousel />
       </section>
     </div>
   );
